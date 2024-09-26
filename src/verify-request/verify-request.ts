@@ -11,7 +11,7 @@ export default async function verifyRequest({
   options,
 }: {
   query: Record<string, string | string[] | undefined>;
-  cookies: Record<string, string>;
+  cookies: Partial<{[key: string]: string;}>
   res?: ServerResponse;
   options: Options;
 }) {
